@@ -1,5 +1,11 @@
 # Revision history for aoc
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.1.0.0 -- 2022-12-17
 
-* First version. Released on an unsuspecting world.
+https://adventofcode.com/2022/day/1
+
+first I need to parse the file, find which symbol separates the subsets, compare sums.
+function :: [text file] -> ... -> n
+
+
+
