@@ -5,7 +5,7 @@
 https://adventofcode.com/2022/day/1
 
 first I need to parse the file, find which symbol separates the subsets, compare sums.
-function :: [text file] -> ... -> n
+function :: IO -> [String] -> [[Char | String]] ... -> n
 
 
 
