@@ -21,4 +21,8 @@ unitTests = testGroup "Unit tests"
   -- the following test does not hold
   , testCase "List comparison (same length)" $
       [1, 2, 3] `compare` [1,2,2] @?= LT
+
+  --TODO: task1 -> Int
+  , testCase "gnomes/calories" $
+      [1, 2, 3] `compare` [1,2,2] @?= LT
   ]
