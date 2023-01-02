@@ -23,13 +23,13 @@ name:               aoc
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
-synopsis:           repo for advent of code
+synopsis:           abstract example of test suite in Haskell
 
 -- A longer description of the package.
 -- description:
 
 -- The license under which the package is released.
-license:            BSD-2-Clause
+license:            MIT
 
 -- The file containing the license text.
 license-file:       LICENSE
@@ -53,6 +53,20 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
 
+library 
+    -- Import common warning flags.
+    -- import:           warnings
+
+    exposed-modules:   Tasks
+
+    -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.15.1.0, text >= 2.0.0, split 
+
+    -- Directories containing source files.
+    hs-source-dirs:   src
+
+    default-language: Haskell2010
+
 executable aoc
     -- Import common warning flags.
     import:           warnings
@@ -67,10 +81,40 @@ executable aoc
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.15.1.0, text >= 2.0.0, split 
+    build-depends:    base ^>=4.15.1.0 , aoc
 
     -- Directories containing source files.
     hs-source-dirs:   app
 
     -- Base language which the package is written in.
     default-language: Haskell2010
+
+test-suite aoc-test
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- The interface type and version of the test suite.
+    type:             exitcode-stdio-1.0
+
+    -- Directories containing source files.
+    hs-source-dirs:   tests
+
+    -- The entrypoint to the test suite.
+    main-is:          Main.hs
+
+    -- Test dependencies.
+    build-depends:    base ^>=4.15.1.0
+                    , tasty
+                    , tasty-hunit
+                    , hspec
+                    , aoc
+                    , text
