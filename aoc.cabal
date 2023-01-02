@@ -112,5 +112,4 @@ test-suite aoc-test
     main-is:          Main.hs
 
     -- Test dependencies.
-    build-depends:    base ^>=4.15.1.0, tasty, tasty-smallcheck, tasty-quickcheck, tasty-hunit
-
+    build-depends:    base ^>=4.15.1.0, tasty, tasty-smallcheck, tasty-quickcheck, tasty-hunit, aoc
