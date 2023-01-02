@@ -9,3 +9,5 @@ task1 contents =
       needle = maximum $ map sum hay
 
   in needle
+
+
