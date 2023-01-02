@@ -1,8 +1,8 @@
---module Main (tests) where
 
 import Tasks
 import Test.Tasty
-import Test.Tasty.Hspec
+--import Test.Tasty.Hspec
+import Test.Tasty.HUnit
 
 import Control.Monad
 import Data.Semigroup 
@@ -10,24 +10,13 @@ import Data.Semigroup
 import Data.Text (Text)
 import qualified Data.Text as Text
 import qualified Data.Text.IO as Text
+import Test.Hspec
+import Control.Exception (evaluate)
 
 main :: IO()
-main = defaultMain tests
+main = hspec $ do
+  describe "Prelude.head" $ do
+    it "returns the best goblin" $ do
+      dt1 <- readFile "data-1"
+      task1 dt1 `shouldBe` (74394 :: Int)
 
-tests :: TestTree
-tests = testGroup "Tests" [unitTests, specCase]
-
-unitTests :: TestTree
-unitTests = testGroup "Unit tests"
-  [ testCase "List comparison (different length)" $
-      [1, 2, 3] `compare` [1,2] @?= GT
-
-  -- the following test does not hold
-  , testCase "List comparison (same length)" $
-      [1, 2, 3] `compare` [1,2,2] @?= LT
-  ]
-
-specCase :: Spec
-specCase = do
-  dt1 <- runIO readFile "data-1"
-  task1 dt1 `shouldBe` 12345

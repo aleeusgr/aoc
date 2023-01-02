@@ -115,6 +115,6 @@ test-suite aoc-test
     build-depends:    base ^>=4.15.1.0
                     , tasty
                     , tasty-hunit
-                    , tasty-hspec
+                    , hspec
                     , aoc
-                    , text 
+                    , text
