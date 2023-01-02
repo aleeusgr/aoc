@@ -1,6 +1,6 @@
 module Main where
 
-import tasks
+import Tasks
 
 main :: IO()
 main = do  
