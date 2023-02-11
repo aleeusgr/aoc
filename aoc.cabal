@@ -60,7 +60,7 @@ library
     exposed-modules:   Tasks
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.15.1.0, text >= 2.0.0, split 
+    build-depends:    base ^>=4.14.1.0, text >= 2.0.0, split 
 
     -- Directories containing source files.
     hs-source-dirs:   src
