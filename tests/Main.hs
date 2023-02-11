@@ -1,17 +1,17 @@
 
 import Tasks
-import Test.Tasty
---import Test.Tasty.Hspec
-import Test.Tasty.HUnit
-
-import Control.Monad
-import Data.Semigroup 
-
-import Data.Text (Text)
-import qualified Data.Text as Text
-import qualified Data.Text.IO as Text
+-- import Test.Tasty
+-- --import Test.Tasty.Hspec
+-- import Test.Tasty.HUnit
+-- 
+-- import Control.Monad
+-- import Data.Semigroup 
+-- 
+-- import Data.Text (Text)
+-- import qualified Data.Text as Text
+-- import qualified Data.Text.IO as Text
 import Test.Hspec
-import Control.Exception (evaluate)
+-- import Control.Exception (evaluate)
 
 main :: IO()
 main = hspec $ do
