@@ -10,4 +10,6 @@ task1 contents =
 
   in needle
 
-
+-- https://wiki.haskell.org/99_questions/Solutions/5
+reverse          :: [a] -> [a]
+reverse          =  foldl (flip (:)) []

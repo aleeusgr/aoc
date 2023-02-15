@@ -20,3 +20,7 @@ main = hspec $ do
       dt1 <- readFile "data-1"
       task1 dt1 `shouldBe` (74394 :: Int)
 
+  describe "Prelude.head" $ do
+    it "returns error" do
+      dt1 <- readFile "data-1"
+      task1 dt1 `shouldBe` (14394 :: Int)
