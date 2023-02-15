@@ -19,6 +19,6 @@ main = hspec $ do
     it "returns the best goblin" $ do
       dt1 <- readFile "data-1"
       task1 dt1 `shouldBe` (74394 :: Int)
-    it "tests reverse" $ do
-      myReverse (myReverse [1..5] ) `shouldBe` [1..5]
+    it "tests myReverse" $ do
+      myReverse (myReverse [1..5] :: [Int] ) `shouldBe` [1..5]
 
